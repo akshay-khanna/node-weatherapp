@@ -10,7 +10,7 @@
 
 const request=require('request') 
 const forecast=(latitude,longitude,callback)=>{
-const url='https://api.darksky.net/forecast/aad0b0371bc6e87264707ffb1aca7a72/'+encodeURIComponent(latitude)+','+encodeURIComponent(longitude)+'?units=si'
+const url='https://api.darksky.net/forecast/aad0b0371bc6e87264707ffb1aca7a72/'+encodeURIComponent(latitude)+','+encodeURIComponent(longitude)+'?units=si&timezone=India/Delhi'
 console.log(url);
 request({ url, json: true} ,(error,{body})=>{
     if(error){
